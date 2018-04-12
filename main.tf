@@ -1,6 +1,6 @@
 resource "digitalocean_ssh_key" "main" {
   name       = "controller.${var.domain}"
-  public_key = "${file("/Users/vaughan/.ssh/id_rsa.pub")}"
+  public_key = "${file("${var.local_publickey_path}")}"
 }
 
 data "template_file" "userdata" {

@@ -1,3 +1,8 @@
+variable "local_publickey_path" {
+  description = "Local SSH key path"
+  default     = "/Users/vaughan/.ssh/id_rsa.pub"
+}
+
 variable "do_token" {
   description = "DigitalOcean API token"
 }
